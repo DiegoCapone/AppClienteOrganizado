@@ -45,7 +45,7 @@ export default class Login extends Component {
                         onPress={() => this.setState({ 
                             cadastrar: !this.state.cadastrar})}>
                             <Text style={styles.buttonText}>
-                            {this.state.cadastrar ? 'Ainda não possui conta' : 'Já tenho conta!' }</Text>
+                            {!this.state.cadastrar ? 'Ainda não possui conta' : 'Já tenho conta!' }</Text>
                         </TouchableOpacity>
                        
                     
