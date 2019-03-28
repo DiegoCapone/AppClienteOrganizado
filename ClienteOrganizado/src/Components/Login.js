@@ -59,7 +59,7 @@ export default class Login extends Component {
     }
 
     signinOrSignup = () => {
-        if (!this.state.cadastrar) {
+        if (this.state.cadastrar) {
             this.signup()
         } else {
             this.signin()
@@ -125,7 +125,7 @@ export default class Login extends Component {
                             cadastrar: !this.state.cadastrar
                         })}>
                         <Text style={styles.buttonText}>
-                            {!this.state.cadastrar ? 'Ainda não possui conta' : 'Já tenho conta!'}</Text>
+                            {this.state.cadastrar ? 'Já tenho conta!': 'Ainda não possui conta'}</Text>
                     </TouchableOpacity>
 
 
