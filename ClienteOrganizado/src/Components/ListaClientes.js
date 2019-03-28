@@ -11,7 +11,7 @@ import {
 
 export default class ListaCliente extends Component {
     render(){
-        retur(
+        return(
             <Text>Lista de clientes</Text>
         )
     }

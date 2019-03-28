@@ -15,14 +15,24 @@ const Routes = createDrawerNavigator({
     },
   });
 
-const menu =  createAppContainer(Routes); 
+const Menu =  createAppContainer(Routes); 
 
 
-const Autenticacao = createSwitchNavigator(
-{    
-    Entrar: Login,
-    Registrar: menu,
+const MainRoutes = {
+  
+  Login: {
+      name: 'Login',
+      screen: Login
+  },
+  Menu: {
+      name: 'Menu',
+      screen: Menu
+  }
+}
+
+const MainNavigator = createSwitchNavigator(MainRoutes, {
+  initialRouteName: 'Login'
 })
    
   
-export default createAppContainer(Autenticacao);
+export default createAppContainer(MainNavigator);

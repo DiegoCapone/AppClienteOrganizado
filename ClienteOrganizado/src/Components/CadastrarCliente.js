@@ -11,7 +11,7 @@ import {
 
 export default class CadastrarCliente extends Component {
     render(){
-        retur(
+        return(
             <Text>Cadastrar clientes</Text>
         )
     }
