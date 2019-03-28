@@ -5,7 +5,8 @@ import {
     View,
     ImageBackground,
     StyleSheet,
-    TouchableOpacity
+    TouchableOpacity,
+    Alert
 
 } from 'react-native'
 import background from '../../assets/bg.jpg'
@@ -50,14 +51,15 @@ export default class Login extends Component {
             })
 
             Alert.alert('Sucesso!', 'Usuário cadastrado :)')
-            this.setState({ stageNew: false })
+            this.setState({ cadastrar: true })
         } catch (err) {
-            showError(err)
+            Alert.alert('Sucesso!', 'Falha ao cadastrar :)')
+            // showError(err)
         }
     }
 
     signinOrSignup = () => {
-        if (this.state.stageNew) {
+        if (!this.state.cadastrar) {
             this.signup()
         } else {
             this.signin()
